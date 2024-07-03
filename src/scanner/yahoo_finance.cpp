@@ -109,7 +109,6 @@ shared_ptr<ProjectionRelation> GeneratePlan(YahooFunctionData &bind_data) {
     aliases.emplace_back("symbol");
   }
   expressions.emplace_back(std::move(star_exp));
-  aliases.emplace_back("star");
 
   auto proj_rel = make_shared_ptr<ProjectionRelation>(
       csv_rel, std::move(expressions), aliases);
